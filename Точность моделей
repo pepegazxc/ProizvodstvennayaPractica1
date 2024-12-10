@@ -1,0 +1,7 @@
+from sklearn.metrics import accuracy_score
+y_pred_rf = rf.predict(X_test)
+y_pred_gb = gb.predict(X_test)
+accuracy_rf = accuracy_score(y_test, y_pred_rf)
+accuracy_gb = accuracy_score(y_test, y_pred_gb)
+print(f"Точность Random Forest: {accuracy_rf:.2f}")
+print(f"Точность Gradient Boosting: {accuracy_gb:.2f}")
