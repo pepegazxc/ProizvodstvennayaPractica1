@@ -1,0 +1,7 @@
+from sklearn.metrics import roc_auc_score
+y_prob_rf = rf.predict_proba(X_test)[:, 1]
+y_prob_gb = gb.predict_proba(X_test)[:, 1]
+roc_auc_rf = roc_auc_score(y_test, y_prob_rf)
+roc_auc_gb = roc_auc_score(y_test, y_prob_gb)
+print(f"ROC-AUC Random Forest: {roc_auc_rf:.2f}")
+print(f"ROC-AUC Gradient Boosting: {roc_auc_gb:.2f}")
