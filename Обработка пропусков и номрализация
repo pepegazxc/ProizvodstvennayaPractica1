@@ -1,0 +1,7 @@
+from sklearn.preprocessing import StandardScaler
+# Заполнение пропусков медианой
+data.fillna(data.median(numeric_only=True), inplace=True)
+# Нормализация числовых признаков
+scaler = StandardScaler()
+numeric_columns = data.select_dtypes(include=['float64', 'int64']).columns
+data[numeric_columns] = scaler.fit_transform(data[numeric_columns])
