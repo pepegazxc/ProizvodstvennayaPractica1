@@ -1,0 +1,6 @@
+from sklearn.metrics import classification_report
+print("Отчет классификации Random Forest:")
+print(classification_report(y_test, y_pred_rf))
+print("Отчет классификации Gradient Boosting:")
+print(classification_report(y_test, y_pred_gb))
+
